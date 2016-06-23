@@ -1,0 +1,21 @@
+{
+  "name": "starter prj",
+  "description": "starter technologies for prj",
+  "main": "index.html",
+  "authors": [
+    "Matteo Padova <padova.matteo@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "gsap": "^1.18.5"
+  }
+}
