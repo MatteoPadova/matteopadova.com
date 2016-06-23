@@ -1,0 +1,139 @@
+/*** COMPASS IMPORT ***/
+@import "compass/css3";
+/*** FONTS ***/
+
+@font-face {
+    font-family: 'fontface';
+    src: url('../fonts/.eot');
+    src: url('../fonts/.eot') format('embedded-opentype'),
+         url('../fonts/.woff2') format('woff2'),
+         url('../fonts/.woff') format('woff'),
+         url('../fonts/.ttf') format('truetype'),
+         url('../fonts/.svg#FreightBigBlack') format('svg');
+}
+
+@font-face {
+    font-family: 'fontface2';
+    src: url('../fonts/.eot');
+    src: url('../fonts/.eot') format('embedded-opentype'),
+         url('../fonts/.woff2') format('woff2'),
+         url('../fonts/.woff') format('woff'),
+         url('../fonts/.ttf') format('truetype'),
+         url('../fonts/.svg#FreightBigBlack') format('svg');
+}
+
+
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 50px white inset!important;
+    z-index:-999;
+    color:#000!important;
+    padding-left:10px;
+    
+}
+input:-webkit-autofill {
+    background-color: black !important;
+    color:#000!important
+}
+
+/*** VARIABLE ***/
+$sans-serif-font:'mont', sans-serif;
+$title-font:'fontface1';
+$text-font:'fontface2', serif;
+
+$black:#0d0c0f;
+$white:#fff;
+$ivory:#F7F7F6;
+
+$text-big:30px;
+$text-medium:18px;
+$text-tiny:12px;
+
+/*** RESPONSIVE ***/
+$break-medium:1500px;
+$break-mm:1350px;
+$break-small:1250px;
+$break-thin:1100px;
+$break-tt:1000px;
+$break-tiny:970px;
+
+@mixin menu-type(){
+		font-family:$sans-serif-font;
+		color: $black;
+		-webkit-font-smoothing:antialiased;
+		-moz-font-smoothing:antialiased;
+		-ms-font-smoothing:antialiased;
+		font-smoothing:antialiased;
+		font-size: 9px;
+		box-sizing: border-box;
+		line-height:1.2em;
+		letter-spacing:1.2px;
+		text-transform:uppercase;
+}
+@mixin title-type(){
+		font-family:$title-font;
+		color: $black;
+		-webkit-font-smoothing:antialiased;
+		-moz-font-smoothing:antialiased;
+		-ms-font-smoothing:antialiased;
+		font-smoothing:antialiased;
+		font-size: 90px;
+		box-sizing: border-box;
+		line-height: 1em;
+		letter-spacing:0.47px;
+		text-align:left;
+}
+@mixin subtitle-type(){
+		font-family:$title-font;
+		color: $black;
+		-webkit-font-smoothing:antialiased;
+		-moz-font-smoothing:antialiased;
+		-ms-font-smoothing:antialiased;
+		font-smoothing:antialiased;
+		font-size: 19px;
+		box-sizing: border-box;
+		line-height: 26px;
+		letter-spacing:0.47px;
+		text-align:left;
+}
+@mixin text-type(){
+		font-family:$text-font;
+		color: $black;
+		-webkit-font-smoothing:antialiased;
+		-moz-font-smoothing:antialiased;
+		-ms-font-smoothing:antialiased;
+		font-smoothing:antialiased;
+		font-size: 16px;
+		box-sizing: border-box;
+		line-height: 26px;
+		letter-spacing:0.47px;
+		text-align:left;
+}
+@mixin background-img($attachment){
+	background-size:cover;
+	background-position:center;
+	background-attachment:$attachment;
+}
+
+.text-center{
+	text-align:center;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+/*** GENERAL ***/
+body{
+	height:auto;
+}
+.container{
+	width:100%;
+	max-width:100%;
+	padding-left:7.14285714%;
+	padding-right:7.14285714%;
+}
+hr{
+	border:0px;
+}
