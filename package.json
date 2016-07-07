@@ -1,5 +1,5 @@
 {
-  "name": "dsignincmilano.com",
+  "name": "project",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,6 +10,7 @@
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-inject": "^4.1.0"
+    "gulp-inject": "^4.1.0",
+    "gulp-install": "^0.6.0"
   }
 }

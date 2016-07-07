@@ -1,7 +1,7 @@
 {
-  "name": "starter prj",
-  "description": "starter technologies for prj",
-  "main": "index.html",
+  "name": "project",
+  "description": "",
+  "main": "no main file yo",
   "authors": [
     "Matteo Padova <padova.matteo@gmail.com>"
   ],
@@ -16,6 +16,9 @@
   ],
   "dependencies": {
     "bootstrap": "^3.3.6",
-    "gsap": "^1.18.5"
+    "font-awesome": "fontawesome#^4.6.3",
+    "gsap": "^1.18.5",
+    "fancybox": "^2.1.5",
+    "skrollr": "^0.6.30"
   }
 }
