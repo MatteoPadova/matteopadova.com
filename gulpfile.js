@@ -9,6 +9,7 @@ gulp.task('index', function () {
 						  'bower_components/fancybox/source/jquery.fancybox.css',
 						  'bower_components/fancybox/source/jquery.fancybox.js',
 						  'bower_components/skrollr/src/skrollr.js',
+						  'bower_components/font-awesome/css/font-awesome.css',
  						  'bower_components/gsap/src/minified/TweenMax.min.js'], {read: false});
  
   return target.pipe(inject(sources)).pipe(gulp.dest('.'));
