@@ -3,23 +3,23 @@
 /*** FONTS ***/
 
 @font-face {
-    font-family: 'fontface';
-    src: url('../fonts/.eot');
-    src: url('../fonts/.eot') format('embedded-opentype'),
-         url('../fonts/.woff2') format('woff2'),
-         url('../fonts/.woff') format('woff'),
-         url('../fonts/.ttf') format('truetype'),
-         url('../fonts/.svg#FreightBigBlack') format('svg');
+    font-family: 'FreightBigBook';
+    src: url('../fonts/freight/FreightBigBook.eot');
+    src: url('../fonts/freight/FreightBigBook.eot') format('embedded-opentype'),
+         url('../fonts/freight/FreightBigBook.woff2') format('woff2'),
+         url('../fonts/freight/FreightBigBook.woff') format('woff'),
+         url('../fonts/freight/FreightBigBook.ttf') format('truetype'),
+         url('../fonts/freight/FreightBigBook.svg#FreightBigBook') format('svg');
 }
 
 @font-face {
-    font-family: 'fontface2';
-    src: url('../fonts/.eot');
-    src: url('../fonts/.eot') format('embedded-opentype'),
-         url('../fonts/.woff2') format('woff2'),
-         url('../fonts/.woff') format('woff'),
-         url('../fonts/.ttf') format('truetype'),
-         url('../fonts/.svg#FreightBigBlack') format('svg');
+    font-family: 'mont';
+    src: url('../fonts/mont/montserrat-regular-webfont.eot');
+    src: url('../fonts/mont/montserrat-regular-webfont.eot') format('embedded-opentype'),
+         url('../fonts/mont/montserrat-regular-webfont.woff2') format('woff2'),
+         url('../fonts/mont/montserrat-regular-webfont.woff') format('woff'),
+         url('../fonts/mont/montserrat-regular-webfont.ttf') format('truetype'),
+         url('../fonts/mont/montserrat-regular-webfont.svg#mont') format('svg');
 }
 
 
@@ -38,10 +38,10 @@ input:-webkit-autofill {
 
 /*** VARIABLE ***/
 $sans-serif-font:'mont', sans-serif;
-$title-font:'fontface1';
-$text-font:'fontface2', serif;
+$title-font:'FreightBigBook', serif;
+$text-font:'FreightBigBook', serif;
 
-$black:#0d0c0f;
+$black:#000000;
 $white:#fff;
 $ivory:#F7F7F6;
 
@@ -55,7 +55,7 @@ $break-mm:1350px;
 $break-small:1250px;
 $break-thin:1100px;
 $break-tt:1000px;
-$break-tiny:970px;
+$break-tiny:650px;
 
 @mixin menu-type(){
 		font-family:$sans-serif-font;
@@ -64,7 +64,7 @@ $break-tiny:970px;
 		-moz-font-smoothing:antialiased;
 		-ms-font-smoothing:antialiased;
 		font-smoothing:antialiased;
-		font-size: 9px;
+		font-size: 13px;
 		box-sizing: border-box;
 		line-height:1.2em;
 		letter-spacing:1.2px;
@@ -77,7 +77,7 @@ $break-tiny:970px;
 		-moz-font-smoothing:antialiased;
 		-ms-font-smoothing:antialiased;
 		font-smoothing:antialiased;
-		font-size: 90px;
+		font-size: 20px;
 		box-sizing: border-box;
 		line-height: 1em;
 		letter-spacing:0.47px;
@@ -124,16 +124,325 @@ textarea:focus,
 button:focus {
     outline: none;
 }
+
+
+/**************** BREAKPOINTS ****************/
+
+@mixin break-medium {
+  @media (max-width: #{$break-medium}) {
+    @content;
+  }
+}
+@mixin break-mm {
+  @media (max-width: #{$break-mm}) {
+    @content;
+  }
+}
+@mixin break-small {
+  @media (max-width: #{$break-small}) {
+    @content;
+  }
+}
+@mixin break-thin {
+  @media (max-width: #{$break-thin}) {
+    @content;
+  }
+}
+@mixin break-tt {
+  @media (max-width: #{$break-tt}) {
+    @content;
+  }
+}
+@mixin break-tiny {
+  @media (max-width: #{$break-tiny}) {
+    @content;
+  }
+}
+@mixin break-supertiny {
+  @media (max-width: #{$break-supertiny}) {
+    @content;
+  }
+}
+
+
 /*** GENERAL ***/
+::selection {
+  background: $black;
+  color:$white;
+}
+::-moz-selection {
+   background: $black;
+   color:$white;
+}
+::-moz-selection {
+   background: $black;
+   color:$white;
+}
+::-webkit-selection {
+   background: $black;
+   color:$white;
+}
+::-ms-selection {
+   background: $black;
+   color:$white;
+}
+
+
 body{
 	height:auto;
+	margin:initial;
+	@include text-type();
+	@include transition(all 0.5s ease-in-out);
+	background-size:contain;
+	background-position:center;
+	opacity:0;
 }
 .container{
 	width:100%;
 	max-width:100%;
 	padding-left:7.14285714%;
 	padding-right:7.14285714%;
+	margin:initial;
 }
 hr{
 	border:0px;
+}
+a{
+	color:$black;
+	text-decoration:underline;
+	@include transition(all 0.5s ease-in-out);
+	&:hover{
+		color:grey;
+	}
+	
+}
+/**************** HOME ****************/
+#identity{
+	width:38%;
+	min-height:1px;
+	max-width:100%;
+	margin-top:100px;
+	position:relative;
+	float:left;
+	padding-left:1%;
+	padding-right:1%;
+	@include break-thin{
+		margin-top:40px;
+	}
+	@include break-tiny{
+		margin-top:0px;
+		width:100%;
+	}
+}
+#images{
+	width:58%;
+	max-width:100%;
+	position:relative;
+	float:left;
+	min-height:1px;
+	padding-left:1%;
+	padding-right:1%;
+	@include break-tiny{
+		margin-top:0px;
+		width:100%;
+	}
+}
+header{
+	margin-top:100px;
+	max-width:100%;
+	width:350px;
+	@include break-tiny{
+		padding-top:7.14285714%;
+		margin-top:0px;
+	}
+	h1{
+		@include title-type();
+		font-weight:normal;
+		@include transition(all 0.5s ease-in-out);
+		span{
+			
+		}
+	}
+}
+main#info{
+	section.text{
+		p{
+			@include text-type();
+			@include transition(all 0.5s ease-in-out);
+		}
+		.goff{
+			@include transition(opacity 0.5s ease-in-out);
+			span{
+				font-size:14px;
+			}
+			u{
+				text-decoration:underline;
+			}
+		}
+		.goff.fadeInDown{
+			font-size:27px;
+			color:$white;
+			a{
+				@include transition(opacity 0.5s ease-in-out);
+				@include transition(color 0.5s ease-in-out);
+				text-decoration:none;
+			}
+			a:visited{
+				color:grey;
+			}
+		}
+	}
+}
+aside.content{
+	width:100%;
+	max-width:100%;
+	margin-top:50px;
+	display: table;
+	content: " ";
+	clear:both;
+	@include break-tiny{
+		margin-top:10px;
+	}
+	figure{
+		margin:0 auto;
+		display:block;
+		width:100%;
+		position:relative;
+		img.mp{
+			max-width:100%;
+			position:absolute;
+			z-index:2;
+			left: 25%;
+			top: 90px;
+			box-shadow: -5px 1rem 2rem rgba(0, 0, 0, 0.3)
+		}
+		div.mp{
+			max-width:100%;
+			position:absolute;
+			z-index:2;
+			left: 25%;
+			top: 90px;
+			width:241px;
+			height:391px;
+			background-color:$black;
+		}
+		img.art{
+			max-width:100%;
+			position:absolute;
+			top:0px;
+			left:10%;
+			z-index:1;
+		}
+		div.art{
+			max-width:100%;
+			position:absolute;
+			top:50px;
+			left:10%;
+			z-index:1;
+			width:241px;
+			height:391px;
+			background-size:contain;
+			background-repeat:no-repeat;
+			background-position:center;
+			background-image:url("../images/white-1.gif");
+			@include break-tiny{
+				top:0px;
+				left:50%;
+				margin-left:-120.5px;
+			}
+		}
+	}
+}
+/*************** OFFLINE-ONLINE ******************/
+.offline{
+	background-color:$black;
+	@include transition(all 0.5s ease-in-out);
+	a{
+		color:$white;
+		text-decoration:underline;
+		@include transition(all 0.5s ease-in-out);
+		&:hover{
+			color:grey;
+		}
+		&:visited{
+			color:$white;
+		}
+	}
+	header{
+		h1{
+			color:$white;
+			@include transition(all 0.5s ease-in-out);
+		}
+	}
+	main#info{
+		section.text{
+			p{
+				color:$white;
+				@include transition(all 0.5s ease-in-out);
+			}
+		}
+	}
+}
+.online{
+	background-color:green;
+}
+
+/*************** CARD ******************/
+
+#cards{
+	figure {
+	    height: 100vh;
+	    display: flex;
+	    flex-wrap: wrap;
+	    justify-content: center;
+	    align-items: center;
+	  @media (min-width: 992px) {
+	    flex-wrap: nowrap;
+	  }
+	}
+	
+	//Card
+	.card {
+	  transform: rotateX(0) rotateY(0);
+		transform-style: preserve-3d;
+	  transition-duration: 0.1s;
+	  transition-timing-function: ease !important;
+	  &:overlay {
+	    position: absolute;
+	    left: 0;
+	    top: 0;
+	    width: 100%;
+	    height: 100%;
+	    background-size: cover;
+	    mix-blend-mode: lighten;
+	    opacity: 0.5;
+	  }
+	  &:image {
+	    img {
+	      max-width: 100%;
+	      height: auto;
+	      mix-blend-mode: lighten;
+	    }
+	  }
+	  &.is-out {
+	    transform: rotateX(0) rotateY(0) !important;
+	    transition-duration: 1s;
+	  }
+	}
+}
+
+/*************** ANIMATION ******************/
+@include keyframes(fadeInDown) {
+	0% {
+		opacity: 0;
+		@include transform(translateY(-30px));
+	}
+
+	100% {
+		opacity: 1;
+		@include transform(translateY(-0px));
+	}
+}
+.fadeInDown{
+	@include animation(2s  ease-in-out fadeInDown forwards);
 }
